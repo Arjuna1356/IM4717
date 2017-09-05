@@ -1,0 +1,43 @@
+body { font-family: Arial;
+}
+
+#wrapper { width: 80%;
+           margin: auto;
+           min-width: 850px;		   
+} 
+
+header { 
+}
+
+h1 { margin: 0px;
+      height: 128px;
+}
+
+nav { font-family: Lucida Sans Unicode; 
+      background-color: #212c62;
+      height: 45px;
+}
+
+nav a {	margin: 10px 15px;
+display: inline-block;
+    vertical-align: middle;
+        text-decoration: none; 
+        color: #dee2e6;
+} 
+
+h2 { color: #869dc7; 
+     font-family: arial, sans-serif;
+}
+
+.content { padding: 20px 20px 0 20px; 
+} 
+
+#floatright { margin: 10px;
+              float: right;
+}
+
+footer { font-size:70%;
+         text-align: center;
+         clear: right;
+         padding-bottom:20px;
+}	
