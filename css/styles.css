@@ -1,43 +1,109 @@
-body { font-family: Arial;
+body {
+  width: 80%;
+  margin: auto;
+  min-width: 850px;	
+	
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  font-family: Arial;
 }
 
-#wrapper { width: 80%;
-           margin: auto;
-           min-width: 850px;		   
+header {
+  height: 128px;
+}
+
+#location-details {
+  margin-top: 15px;
+  width: 305px;
+  float: right;
+  
+  font-size: 13.5px;
+  color: #ffffff;
+}
+
+#location-details h1 {
+  margin: 0px;
+  
+  font-size: 15px;
+  color: #99b6c9;
+}
+
+#location-details h2 {
+  margin: 0px;
+  
+  font-size: 13.5px;
+  color: #ffffff;
+}
+
+#location-details p {
+  margin: 0px;
+  
+  font-size: 11px;
+}
+
+#logo {
+  float:left;
+  margin: 0px;
+  width: 230px;
+  height: 128px;
+}
+
+nav {
+  height: 45px;
+  background-color: #212c62;
+  
+  font-family: Lucida Sans Unicode;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav li{
+  margin-top: 5px;
+  float: left;
+  border-right: solid 2px #dee2e6;
+}
+
+nav li:last-child {
+  border-right: none;
+}
+
+nav li a {
+  padding: 5px 15px;
+  display: block;
+  
+  text-decoration: none; 
+  color: #dee2e6;
+}
+
+nav li a:hover {
+  border-bottom: solid 3px #657088;
+}
+
+h2 {
+  color: #869dc7; 
+  font-family: arial, sans-serif;
+}
+
+.content {
+  padding: 0px; 
 } 
 
-header { 
+#floatright {
+  margin: 10px;
+  float: right;
 }
 
-h1 { margin: 0px;
-      height: 128px;
-}
-
-nav { font-family: Lucida Sans Unicode; 
-      background-color: #212c62;
-      height: 45px;
-}
-
-nav a {	margin: 10px 15px;
-display: inline-block;
-    vertical-align: middle;
-        text-decoration: none; 
-        color: #dee2e6;
-} 
-
-h2 { color: #869dc7; 
-     font-family: arial, sans-serif;
-}
-
-.content { padding: 20px 20px 0 20px; 
-} 
-
-#floatright { margin: 10px;
-              float: right;
-}
-
-footer { font-size:70%;
-         text-align: center;
-         clear: right;
-         padding-bottom:20px;
+footer {
+  clear: right;
+  padding-bottom:20px;
+  
+  text-align: left;
+  font-size:70%;
+  color: #e7ebee;
 }	
