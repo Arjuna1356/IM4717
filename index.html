@@ -5,19 +5,22 @@
 <title>Lunar Theatre</title>
 <meta charset="utf-8">
 
-<link rel="stylesheet" href="css/styles.css">
-
 <style>
 
 </style> 
 
+<link rel="stylesheet" href="css/template_styles.css">
+<link rel="stylesheet" href="css/index.css"/>
+<link rel="stylesheet" href="css/movie_slider.css"/>
+
+<script type="text/javascript" src="js/movie_slider.js"></script>
 </head>
 
 <body>
   <header>
     <div id="logo">
       <a href="index.html">
-        <img src="images/lunartheatrelogocropped.png" 
+        <img src="images/logo.png" 
           alt="Lunar Theatre">
       </a>
     </div>
@@ -33,28 +36,112 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="showtimes.html">Showtimes</a></li>
-      <li><a href="comingsoon.html">Coming Soon</a></li>
+      <li><a href="movies.html">Movies</a></li>
       <li><a href="buytickets.html">Buy Tickets</a></li>
+      <li><a href="checkbooking.html">Check Booking</a></li>
       <li><a href="contactus.html">Contact Us</a></li>
     </ul>
   </nav>
+
+  <div id="buy_banner">
+    <h1>
+      Buy Tickets Online
+    </h1>
+    
+    <p>
+      Save time and don't wait in line
+      <br>
+      Make sure you get a seat to the
+      <br> 
+      movie you want to see.
+    </p>
+    
+    <a href="buytickets.html" id="buy_btn">Get Tickets Online Now</a>
+  </div>
   
-  <div class="content"> 
-    <img src="lighthouseisland.jpg" width="250" height="355" id="floatright" alt="Lighthouse Island">
-    <h2>Locally Roasted Free-Trade Coffee</h2>
-    <p>Indulge in the aroma of freshly ground roast coffee. Specialty drinks are available hot or cold.</p>
-    <h2>Specialty Pastries</h2>
-    <p>Enjoy a selection of our fresh-baked, organic pastries, including 
-        fresh-fruit muffins, scones, croissants, and cinammon rolls.</p>
-    <h2>Lunchtime is Anytime</h2>
-    <p>Savor delicious wraps and sandwiches on hearty, whole-grain breads with locally-grown salad, fruit, and vegetables. </p>
-    <h2>Panoramic View</h2>
-    <p>Take in some scenery! The top of our lighthouse offers a panoramic view of the countryside. Challenge your friends to climb our 100-stair tower.</p>
+  <div id="movie_slider">
+    <ul id="movie_slides">
+      <li class="movie_slide" style="z-index:1">
+        <a href="#">
+          <img class="poster" src="images/posters/bladerunner_portrait.jpg" style="display:block;" alt="Bladerunner Poster">
+        </a>
+      </li>
+      
+      <li class="movie_slide" style="z-index:0">
+        <a href="#">
+          <img class="poster" src="images/posters/it_landscape.jpg" style="display:none;" alt="It Poster">
+        </a>
+      </li>
+      
+      <li class="movie_slide"style="z-index:0">
+        <a href="#">
+          <img class="poster" src="images/posters/kingsman_landscape.jpg" style="display:none;" alt="Kingsman Poster">
+        </a>
+      </li>
+      
+      <li class="movie_slide" style="z-index:0">
+        <a href="#">
+          <img class="poster" src="images/posters/thor_portrait.jpg" style="display:none;" alt="Thor Poster">
+        </a>
+      </li>
+    </ul>
+    
+    <button class="slider_btn" id="slider_prev">&#10094;</button>
+    <button class="slider_btn" id="slider_next">&#10095;</button>
+    
+    <ul id="radio_buttons">
+      <li id="radio1" class="radio_button">
+        <input type="radio" id="radio1" name="radio" class="radio" checked="checked">
+        <label class="radio_label" for="radio1"></label>
+      </li>
+      
+      <li id="radio2" class="radio_button">
+        <input type="radio" id="radio2" name="radio" class="radio" checked="checked">
+        <label class="radio_label" for="radio2"></label>
+      </li>
+      
+      <li id="radio3" class="radio_button">
+        <input type="radio" id="radio3" name="radio" class="radio" checked="checked">
+        <label class="radio_label" for="radio3"></label>
+      </li>
+      
+      <li id="radio4" class="radio_button">
+        <input type="radio" id="radio4" name="radio" class="radio" checked="checked">
+        <label class="radio_label" for="radio4"></label>
+      </li>
+    </ul>
+  </div>
+  
+  <div id="spotlight_area">
+    <div class="spotlight_section">
+      <h1>Spotlight</h1>
+      
+      <a href="#">
+        <img class="spotlight" src="images/posters/kingsman_thumbnail.jpg" style="opacity:1; display:block">
+      </a>
+    </div>
+    
+    <div class="spotlight_section">
+      <h1>Showing in 3D</h1>
+      
+      <a href="#">
+        <img class="spotlight" src="images/posters/bladerunner_thumbnail.jpg" style="opacity:1; display:block">
+      </a>
+    </div>
+    
+    <div class="spotlight_section">
+      <h1>Coming Soon</h1>
+      
+      <a href="#">
+        <img class="spotlight" src="images/posters/thor_thumbnail.jpg" style="opacity:1; display:block">
+      </a>
+    </div>
   </div>
   
   <footer>Copyright &copy; 2014 Lunar Theatre, All Rights Reserved
   </footer>
+
+  <script type="text/javascript" src="js/movie_sliderR.js"></script>
 </body>
 </html>
 

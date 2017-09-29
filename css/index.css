@@ -1,0 +1,93 @@
+#buy_banner {
+  margin: 15px 0px;
+  height: 95px;
+  width: 100%;
+
+  background-image: url(../images/buy_banner.jpg);
+  background-size: cover;
+}
+
+#buy_banner h1 {
+  margin: 0px;
+  padding-top: 27px;
+  padding-left: 20px;
+  float: left;
+  
+  font-family: Arial;
+  font-size: 37px;
+  font-weight: bold;
+  color: #c7cfd1;
+  text-transform: uppercase;
+}
+
+#buy_banner p {
+  margin: 0px;
+  padding-top: 18px;
+  padding-left: 20px;
+  float: left;
+  
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  color: #c7cfd1;
+  text-transform: uppercase;
+}
+
+#buy_btn {
+  margin-top: 15px;
+  margin-left: 10px;
+  padding-top: 10px;
+  width: 190px;
+  height: 55px;
+  float: left; 
+  
+  background-color: #3093c7;
+  background-image: linear-gradient(to bottom, #3093c7, #1c5a85);
+  border: 1px solid #25729a;
+  border-radius: 5px;
+  
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #c7cfd1;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+#buy_btn:hover {
+  border: 1px solid #1c5675;
+  background-color: #26759e;
+  background-image: linear-gradient(to bottom, #26759e, #133d5b);
+}
+
+#spotlight_area {
+  width: 100%;
+  height: 220px;
+  margin-top: 10px;
+  
+  background-color: #e7ebee;
+}
+
+#spotlight_area h1 {
+  margin: 0px;
+  
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: normal;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.spotlight_section {
+  margin: 14px;
+  width: 300px;
+  height: 190px;
+  float: left;
+}
+
+.spotlight {
+  margin: auto;
+  height: 165px;
+}
