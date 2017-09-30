@@ -1,0 +1,45 @@
+#content {
+  margin-top: 15px;
+  height: 500px;
+  
+  overflow: hidden;
+  
+  background-color: #212c62;
+}
+
+#breadcrumbs {
+  margin: 20px 25px;
+  width: 100%;
+  
+  font-family: Arial;
+}
+
+#breadcrumbs a {
+  text-decoration: none;
+  color: #bbd2e4;
+}
+
+#breadcrumbs p {
+  margin-left: 15px;
+  display: inline;
+}
+
+#movie_box {
+  margin: 20px;
+  height: 425px;
+  position: relative;
+  
+  background-color: #bbd2e4;
+}
+
+.movie_display {
+  margin: 25px;
+  width: 135px;
+  height: 350px;
+  float: left;
+}
+
+.movie_poster {
+  width: 135px;
+  height: 200px;
+}
