@@ -1,6 +1,7 @@
 #content {
   margin-top: 15px;
-  height: 500px;
+  width: 100%;
+  display: inline-block;
   
   overflow: hidden;
   
@@ -26,20 +27,63 @@
 
 #movie_box {
   margin: 20px;
-  height: 425px;
+  margin-top: 0px;
+  width: 100%;
   position: relative;
-  
-  background-color: #bbd2e4;
+  display: inline-block;
 }
 
 .movie_display {
+  display: none;
+  width: 960px;
+  
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #bbd2e4;
+}
+
+.movie_info {
   margin: 25px;
   width: 135px;
   height: 350px;
-  float: left;
+  display: inline-block;
+  
+  animation: fadeEffect 0.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .movie_poster {
   width: 135px;
   height: 200px;
+}
+
+#movie_tabs {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tab_button {
+  padding: 14px 16px;
+  float: left;
+  
+  background-color: #41808f;
+  font-family: Arial;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px 5px 0px 0px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.tab_button:hover {
+    background-color: #6caab9;
+}
+
+.tab_button.active {
+    background-color: #bbd2e4;
 }

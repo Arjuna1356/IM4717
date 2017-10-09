@@ -1,0 +1,32 @@
+#content {
+  margin-top: 15px;
+  width: 100%;
+  display: inline-block;
+  
+  overflow: hidden;
+  
+  background-color: #212c62;
+}
+
+#breadcrumbs {
+  margin: 20px 25px;
+  width: 100%;
+  
+  font-family: Arial;
+}
+
+#breadcrumbs a {
+  text-decoration: none;
+  color: #bbd2e4;
+}
+
+#breadcrumbs p {
+  margin-left: 15px;
+  display: inline;
+}
+
+#email_form {
+  margin: 20px 25px;
+  
+  color: #bbd2e4;
+}

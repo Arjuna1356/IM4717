@@ -5,13 +5,14 @@
 <title>Lunar Theatre</title>
 <meta charset="utf-8">
 
-<link rel="stylesheet" href="css/template_styles.css">
-<link rel="stylesheet" href="css/movies.css">
-
 <style>
 
 </style> 
 
+<link rel="stylesheet" href="css/template_styles.css">
+<link rel="stylesheet" href="css/movies.css">
+
+<script type="text/javascript" src="js/movies_tab.js"></script>
 </head>
 
 <body>
@@ -47,38 +48,38 @@
     </div>
     
     <div id="movie_box">
-      <div class="movie_tabs">
-        <button class="tablink">Now Showing</button>
-        <button class="tablink">Coming Soon</button>
-        
-        <div id="now_showing">
-          <div class="movie_display">
-            <a href="#">
-              <img src="images/posters/it_portrait.jpg" 
-                alt="It Poster" class="movie_poster">
-            </a>
-          </div>
-          <div class="movie_display">
-            <a href="#">
-              <img src="images/posters/kingsman_portrait.jpg" 
-                alt="Kingsman Poster" class="movie_poster">
-            </a>
-          </div>
+      <div id="movie_tabs">
+        <button class="tab_button">Now Showing</button>
+        <button class="tab_button">Coming Soon</button>
+      </div>
+      
+      <div class="movie_display">
+        <div class="movie_info">
+          <a href="#">
+            <img src="images/posters/it_portrait.jpg" 
+              alt="It Poster" class="movie_poster">
+          </a>
         </div>
-        
-        <div id="coming_soon">
-          <div class="movie_display">
-            <a href="#">
-              <img src="images/posters/it_portrait.jpg" 
-                alt="It Poster" class="movie_poster">
-            </a>
-          </div>
-          <div class="movie_display">
-            <a href="#">
-              <img src="images/posters/kingsman_portrait.jpg" 
-                alt="Kingsman Poster" class="movie_poster">
-            </a>
-          </div>
+        <div class="movie_info">
+          <a href="#">
+            <img src="images/posters/kingsman_portrait.jpg" 
+              alt="Kingsman Poster" class="movie_poster">
+          </a>
+        </div>
+      </div>
+      
+      <div class="movie_display">
+        <div class="movie_info">
+          <a href="#">
+            <img src="images/posters/bladerunner_portrait.jpg" 
+              alt="It Poster" class="movie_poster">
+          </a>
+        </div>
+        <div class="movie_info">
+          <a href="#">
+            <img src="images/posters/thor_portrait.jpg" 
+              alt="Kingsman Poster" class="movie_poster">
+          </a>
         </div>
       </div>
     </div>
@@ -86,6 +87,8 @@
   
   <footer>Copyright &copy; 2014 Lunar Theatre, All Rights Reserved
   </footer>
+  
+  <script type="text/javascript" src="js/movies_tabR.js"></script>
 </body>
 </html>
 
