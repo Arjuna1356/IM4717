@@ -21,7 +21,7 @@ function openTab(event)
     tabContent[i].style.display = "none";
   }
   
-  tabContent[currTabIndex].style.display = "block";
+  tabContent[currTabIndex].style.display = "inline-block";
   tabBtns[currTabIndex].classList.add("active");
 }
 
@@ -30,6 +30,6 @@ function init()
   tabBtns = document.getElementsByClassName("tab_button");
   tabContent = document.getElementsByClassName("movie_display");
   
-  tabContent[0].style.display = "block";
+  tabContent[0].style.display = "inline-block";
   tabBtns[0].classList.add("active");
 }
