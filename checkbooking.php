@@ -73,15 +73,17 @@
   
   <div id="content">
     <div id="breadcrumbs">
-      <a href="index.html">Home</a> <p>>></p> <p>Check Bookings</p>
+      <a href="index.html">Home</a> <p>>></p> <p><b>Check Bookings</b></p>
     </div>
     
-    <form action="get_booking" method="post" id="email_form">
-      <label for="email_input">Email: </label>
-      <input type="text" name="email_input" id="email_input" required>
-      <br> <br>
-      <input type="submit" value="Check Bookings">
-    </firm>
+    <div id="content_box">
+      <form action="get_booking" method="post" id="email_form">
+        <label for="email_input">Email: </label>
+        <input type="text" name="email_input" id="email_input" required>
+        <br> <br>
+        <input type="submit" value="Check Bookings">
+      </form>
+    </div>
   </div>
   
   <footer>Copyright &copy; 2014 Lunar Theatre, All Rights Reserved

@@ -94,6 +94,37 @@ h2 {
   float: right;
 }
 
+#content {
+  margin-top: 15px;
+  width: 100%;
+  display: inline-block;
+  
+  overflow: hidden;
+  
+  background-color: #212c62;
+}
+
+#breadcrumbs {
+  margin: 20px 10px;
+  width: 100%;
+  
+  font-family: Arial;
+}
+
+#breadcrumbs a {
+  margin-left: 15px;
+  
+  text-decoration: none;
+  color: #bbd2e4;
+}
+
+#breadcrumbs p {
+  margin-left: 15px;
+  display: inline;
+  
+  color: #dee2e6;
+}
+
 footer {
   padding: 20px 0px 20px 0px;
   clear: right;
