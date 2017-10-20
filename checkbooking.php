@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+  if(isset($_POST['submit']))
+  {
+    @ $db = new mysqli('localhost', 'f37im', 'f37im', 'f37im');
+
+    $userEmail = $_POST['email_input'];
+    
+    $query = "SELECT movies.movieName, movies.movieDate, movies.movieTime,
+                order_items.seatNo, orders.amount, orders.bookingDate
+                  FROM customers, movies, orders, order_items
+                    WHERE customers.email=$userEmail
+                      AND orders.customerID=customers.customerID
+                      AND order_items.orderID=orders.orderID
+                      AND movies.movieID=orders.movieID";
+    
+    $result = $db->query($query);
+    
+    $db->close();
+    
+    if($result)
+    {
+      
+    }
+    else
+    {
+      
+    }
+  }
+?>
+
 <head>
 <title>Lunar Theatre</title>
 <meta charset="utf-8">
@@ -34,9 +64,9 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="Movies.html">Movies</a></li>
+      <li><a href="movies.html">Movies</a></li>
       <li><a href="buytickets.html">Buy Tickets</a></li>
-      <li><a href="checkbooking.html">Check Booking</a></li>
+      <li><a href="checkbooking.php">Check Booking</a></li>
       <li><a href="contactus.html">Contact Us</a></li>
     </ul>
   </nav>
