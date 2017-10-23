@@ -30,78 +30,79 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="Movies.html">Movies</a></li>
+      <li><a href="movies.html">Movies</a></li>
       <li><a href="buytickets.html">Buy Tickets</a></li>
-      <li><a href="checkbooking.html">Check Booking</a></li>
+      <li><a href="checkbooking.php">Check Booking</a></li>
       <li><a href="contactus.html">Contact Us</a></li>
     </ul>
   </nav>
   <div id="content">
+    <div id="breadcrumbs">
+      <a href="index.html">Home</a> <p>>></p> <p><b>Buy Tickets</b></p>
+    </div>
+    
     <div id="innerbox">
-    <div class="tab">
-      <button class="tablinks" onclick="openDay(event, 'Today')" id="defaultOpen">(Today's day)</button>
-      <button class="tablinks" onclick="openDay(event, 'Tomorrow')">(Tomorrow's day)</button>
-      <button class="tablinks" onclick="openDay(event, 'Day_after_Tomorrow')">(The day after tomorrow)</button>
-    </div>
+      <div class="tab">
+        <button class="tablinks" onclick="openDay(event, 'Today')" id="defaultOpen">(Today's day)</button>
+        <button class="tablinks" onclick="openDay(event, 'Tomorrow')">(Tomorrow's day)</button>
+        <button class="tablinks" onclick="openDay(event, 'Day_after_Tomorrow')">(The day after tomorrow)</button>
+      </div>
 
-    <div id="Today" class="tabcontent">
-      <h2>Today</h2>
-      <table>
-        <tr>
-          <td>
-            <h3>The life of Pi</h3>
-            <p>Subtitle/s: English, Chinese<br>
-            PG13 / Some intense sequence</p><br>
-            <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>Kingsman: Golden Circle</h3>
-            <p>Subtitle/s: English, Chinese<br>
-            NC16 / Violence and nudity</p><br>
-            <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
-          </td>
-        </tr>
-      </table>
+      <div id="Today" class="tabcontent">
+        <table>
+          <tr>
+            <td>
+              <h3>The life of Pi</h3>
+              <p>Subtitle/s: English, Chinese<br>
+              PG13 / Some intense sequence</p><br>
+              <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Kingsman: Golden Circle</h3>
+              <p>Subtitle/s: English, Chinese<br>
+              NC16 / Violence and nudity</p><br>
+              <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
+            </td>
+          </tr>
+        </table>
 
-    </div>
+      </div>
 
-    <div id="Tomorrow" class="tabcontent">
-      <h2>Tomorrow</h2>
-      <table>
-        <tr>
-          <td>
-            <h3>The life of Pi</h3><br>
-            <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>Kingsman: Golden Circle</h3><br>
-            <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
-          </td>
-        </tr>
-      </table>
-    </div>
+      <div id="Tomorrow" class="tabcontent">
+        <table>
+          <tr>
+            <td>
+              <h3>The life of Pi</h3><br>
+              <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Kingsman: Golden Circle</h3><br>
+              <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
+            </td>
+          </tr>
+        </table>
+      </div>
 
-    <div id="Day_after_Tomorrow" class="tabcontent">
-      <h2>Day after Tomorrow</h2>
-      <table>
-        <tr>
-          <td>
-            <h3>The life of Pi</h3><br>
-            <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h3>Kingsman: Golden Circle</h3><br>
-            <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
-          </td>
-        </tr>
-      </table>
-    </div>
+      <div id="Day_after_Tomorrow" class="tabcontent">
+        <table>
+          <tr>
+            <td>
+              <h3>The life of Pi</h3><br>
+              <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3>Kingsman: Golden Circle</h3><br>
+              <a href="movie1time.html">Timing 1</a> &nbsp <a href="movie2time.html">Timing 2</a>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
 

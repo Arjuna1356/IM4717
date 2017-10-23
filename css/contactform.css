@@ -1,6 +1,6 @@
 #content {
   margin-top: 15px;
-  height: 500px;
+  display: inline-block;
 
   overflow: hidden;
 
@@ -13,6 +13,10 @@
   padding: 10px;
   position: relative;
   background-color: #bbd2e4;
+}
+
+#formbox h1 {
+  margin: 0px;
 }
 
 form {
