@@ -47,98 +47,120 @@
     </div>
     
     <div id="content_box">
-      <img src="images/posters/it_portrait.jpg" 
-        alt="It Poster" id="movie_poster">
-        
-      <div id="movie_details">
-        <h1>Details</h1>
-        
-        <div id="left_details">
-          <div class="detail_section">
-            <div class="detail_heading">
-              Cast: 
+      <div id="content_wrapper">
+        <img src="images/posters/it_portrait.jpg" 
+          alt="It Poster" id="movie_poster">
+          
+        <div id="movie_details">
+          <h1>Details</h1>
+          
+          <div id="left_details">
+            <div class="detail_section">
+              <div class="detail_heading">
+                Cast: 
+              </div>
+              
+              <div class="detail_text">
+                Jaeden Lieberher, Wyatt Oleff, Jeremy Ray Taylor, Sophia Lillis, Finn Wolfhard
+              </div>
             </div>
             
-            <div class="detail_text">
-              Jaeden Lieberher, Wyatt Oleff, Jeremy Ray Taylor, Sophia Lillis, Finn Wolfhard
+            <div class="detail_section">
+              <div class="detail_heading">
+                Director: 
+              </div>
+              
+              <div class="detail_text">
+                Andrés Muschietti
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Genre: 
+              </div>
+              
+              <div class="detail_text">
+                Horror
+              </div>
             </div>
           </div>
           
-          <div class="detail_section">
-            <div class="detail_heading">
-              Director: 
+          <div id="right_details">
+            <div class="detail_section">
+              <div class="detail_heading">
+                Release: 
+              </div>
+              
+              <div class="detail_text">
+                07-09-2017
+              </div>
             </div>
             
-            <div class="detail_text">
-              Andrés Muschietti
-            </div>
-          </div>
-          
-          <div class="detail_section">
-            <div class="detail_heading">
-              Genre: 
+            <div class="detail_section">
+              <div class="detail_heading">
+                Running Time: 
+              </div>
+              
+              <div class="detail_text">
+                135 minutes
+              </div>
             </div>
             
-            <div class="detail_text">
-              Horror
+            <div class="detail_section">
+              <div class="detail_heading">
+                Distributor: 
+              </div>
+              
+              <div class="detail_text">
+                Warner Brothers
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Language: 
+              </div>
+              
+              <div class="detail_text">
+                English (Subtitles: Chinese)
+              </div>
             </div>
           </div>
         </div>
         
-        <div id="right_details">
-          <div class="detail_section">
-            <div class="detail_heading">
-              Release: 
-            </div>
-            
-            <div class="detail_text">
-              07-09-2017
-            </div>
-          </div>
+        <div id="movie_synopsis">
+          <h1>Synopsys</h1>
           
-          <div class="detail_section">
-            <div class="detail_heading">
-              Running Time: 
-            </div>
-            
-            <div class="detail_text">
-              135 minutes
-            </div>
-          </div>
-          
-          <div class="detail_section">
-            <div class="detail_heading">
-              Distributor: 
-            </div>
-            
-            <div class="detail_text">
-              Warner Brothers
-            </div>
-          </div>
-          
-          <div class="detail_section">
-            <div class="detail_heading">
-              Language: 
-            </div>
-            
-            <div class="detail_text">
-              English (Subtitles: Chinese)
-            </div>
+          <div id="synopsis_text">
+            New Line Cinema’s horror thriller “It,” directed by Andrés Muschietti, 
+            is based on the hugely popular Stephen King novel of the same name, 
+            which has been terrifying readers for decades. 
+            <br><br>
+            When children begin to disappear in the town of Derry, Maine, a 
+            group of young kids are faced with their biggest fears when they 
+            square off against an evil clown named Pennywise, whose history of 
+            murder and violence dates back for centuries. 
           </div>
         </div>
       </div>
       
-      <div id="movie_synopsis">
-        <h1>Synopsys</h1>
+      <div id="showtimes_wrapper">
+        <h1>Showtimes</h1>
         
-        <div id="synopsis_text">
-          New Line Cinema’s horror thriller “It,” directed by Andrés Muschietti, 
-          is based on the hugely popular Stephen King novel of the same name, 
-          which has been terrifying readers for decades. When children begin to 
-          disappear in the town of Derry, Maine, a group of young kids are faced 
-          with their biggest fears when they square off against an evil clown 
-          named Pennywise, whose history of murder and violence dates back for 
-          centuries. 
+        <button class="accordion">Today</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">Tomorrow</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">After that</button>
+        <div class="panel">
+          <p>Lorem ipsum...</p>
         </div>
       </div>
     </div>
@@ -146,6 +168,39 @@
   
   <footer>Copyright &copy; 2014 Lunar Theatre, All Rights Reserved
   </footer>
+  
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    
+    acc[0].classList.add("active");
+    var panel = acc[0].nextElementSibling;
+    panel.style.maxHeight = panel.scrollHeight + "px";
+    
+    var i;
+    for (i = 0; i < acc.length; i++) 
+    {
+      acc[i].onclick = function() 
+      {
+        var acc = document.getElementsByClassName("accordion");
+        
+        for(var j = 0; j < acc.length; j++)
+        {
+          if(acc[j] != this)
+          {
+            acc[j].classList.remove("active");
+            var panel = acc[j].nextElementSibling;
+            panel.style.maxHeight = null;
+          }
+          else 
+          {
+            acc[j].classList.add("active");
+            var panel = acc[j].nextElementSibling;
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        }
+      }
+    }
+  </script>
 </body>
 </html>
 
