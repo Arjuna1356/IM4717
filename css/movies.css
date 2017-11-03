@@ -27,11 +27,11 @@
 }
 
 .tab_button:hover {
-    background-color: #6caab9;
+  background-color: #6caab9;
 }
 
 .tab_button.active {
-    background-color: #bbd2e4;
+  background-color: #bbd2e4;
 }
 
 .movie_display {

@@ -32,7 +32,7 @@
 ?>
 
 <head>
-<title>Lunar Theatre</title>
+<title>Check Booking | Lunar Theatre</title>
 <meta charset="utf-8">
 
 <link rel="stylesheet" href="css/template_styles.css">
