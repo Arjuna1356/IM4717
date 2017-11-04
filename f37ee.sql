@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 03, 2017 at 04:28 PM
+-- Generation Time: Nov 04, 2017 at 05:29 PM
 -- Server version: 5.5.44-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.11
 
@@ -19,6 +19,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `f37ee`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `card_auth`
+--
+
+CREATE TABLE IF NOT EXISTS `card_auth` (
+  `cardNum` int(4) unsigned NOT NULL,
+  `cardName` varchar(50) NOT NULL,
+  `cardExpMth` int(2) unsigned NOT NULL,
+  `cardExpYr` int(2) unsigned NOT NULL,
+  PRIMARY KEY (`cardNum`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `card_auth`
+--
+
+INSERT INTO `card_auth` (`cardNum`, `cardName`, `cardExpMth`, `cardExpYr`) VALUES
+(1234, 'john', 10, 20);
 
 -- --------------------------------------------------------
 
@@ -43,10 +64,14 @@ INSERT INTO `movies` (`movieID`, `movieName`, `movieDate`, `movieTime`) VALUES
 (112, 'Kingsman: The Golden Circle', '2017-11-10', '22:00:00'),
 (113, 'Kingsman: The Golden Circle', '2017-11-11', '15:00:00'),
 (114, 'Kingsman: The Golden Circle', '2017-11-11', '17:00:00'),
+(115, 'Kingsman: The Golden Circle', '2017-11-12', '10:00:00'),
+(116, 'Kingsman: The Golden Circle', '2017-11-12', '13:00:00'),
 (221, 'It', '2017-11-10', '16:30:00'),
 (222, 'It', '2017-11-10', '21:30:00'),
 (223, 'It', '2017-11-11', '13:30:00'),
-(224, 'It', '2017-11-11', '23:30:00');
+(224, 'It', '2017-11-11', '23:30:00'),
+(225, 'It', '2017-11-12', '09:30:00'),
+(226, 'It', '2017-11-12', '14:30:00');
 
 -- --------------------------------------------------------
 
@@ -55,25 +80,13 @@ INSERT INTO `movies` (`movieID`, `movieName`, `movieDate`, `movieTime`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `orders` (
-  `orderID` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `movieID` int(11) NOT NULL,
+  `orderID` int(10) unsigned NOT NULL,
+  `movieID` int(3) NOT NULL,
   `customerEmail` char(50) NOT NULL,
   `bookingDate` char(10) NOT NULL,
   `amount` int(11) NOT NULL,
   PRIMARY KEY (`orderID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
-
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`orderID`, `movieID`, `customerEmail`, `bookingDate`, `amount`) VALUES
-(1, 221, 'sda@dasdsa', '', 0),
-(2, 221, 'sda@dasdsa', '', 0),
-(3, 221, 'sda@dasdsa', '', 0),
-(4, 221, 'sda@dasdsa', '', 0),
-(5, 221, 'sda@dasdsa', '', 0),
-(6, 221, 'sda@dasdsa', '', 0);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -83,8 +96,9 @@ INSERT INTO `orders` (`orderID`, `movieID`, `customerEmail`, `bookingDate`, `amo
 
 CREATE TABLE IF NOT EXISTS `order_items` (
   `orderID` int(10) unsigned NOT NULL,
-  `movieID` int(11) NOT NULL,
-  `seatID` char(2) NOT NULL
+  `movieID` int(3) unsigned NOT NULL,
+  `seatID` varchar(2) NOT NULL,
+  PRIMARY KEY (`movieID`,`orderID`,`seatID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
