@@ -7,25 +7,29 @@
     @ $db = new mysqli('localhost', 'f37ee', 'f37ee', 'f37ee');
 
     $userEmail = $_POST['email_input'];
-    
-    $query = "SELECT movies.movieName, movies.movieDate, movies.movieTime,
-                order_items.seatID, orders.amount, orders.bookingDate
-                  FROM movies, orders, order_items
-                    WHERE orders.customerEmail='$userEmail'
-                      AND order_items.orderID=orders.orderID
-                      AND movies.movieID=orders.movieID";
+
+    $query = "SELECT DISTINCT orderID, movieID from orders WHERE customerEmail='$userEmail'";
     
     $result = $db->query($query);
     
-    $db->close();
+    $orders = array();
+    $movies = array();
     
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-            echo "order: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-        }
-    } else {
-        echo "0 results";
+    $bookingFound = ($result->num_rows > 0);
+    
+    if($bookingFound) 
+    {
+      while($row = $result->fetch_assoc()) 
+      {
+        $orders[] = $row['orderID'];
+        $movies[] = $row['movieID'];
+      }
+    } 
+    else 
+    {
+      echo '<script language="javascript">';
+      echo 'alert("No bookings made under '.$userEmail.' were found.")';
+      echo '</script>';
     }
   }
 ?>
@@ -76,12 +80,78 @@
     </div>
     
     <div id="content_box">
-      <form action="get_booking" method="post" id="email_form">
+      <form action="" method="post" id="email_form">
         <label for="email_input">Email: </label>
         <input type="text" name="email_input" id="email_input" required>
         <br> <br>
-        <input type="submit" value="Check Bookings">
+        <input type="submit" name="submit" value="Check Bookings">
       </form>
+      
+    <?php
+      if($bookingFound)
+      {
+        echo "<table border=\"1\">";
+        echo "  <tr>";
+        echo "    <th>Order No.</th>";
+        echo "    <th>Movie Name</th>";
+        echo "    <th>Date</th>";
+        echo "    <th>Time</th>";
+        echo "    <th>Seats</th>";
+        echo "    <th>Total Cost</th>";
+        echo "    <th>Booking Date</th>";
+        echo "  </tr>";
+        
+        for($i = 0; $i < sizeof($orders); $i++)
+        {
+          $query = "SELECT movieName, movieDate, movieTime from movies WHERE movieID='$movies[$i]'";
+          
+          $result = $db->query($query);
+          
+          while($row = $result->fetch_assoc()) 
+          {
+            $movieName = $row['movieName'];
+            $movieDate = $row['movieDate'];
+            $movieTime = $row['movieTime'];
+          }
+          
+          $query = "SELECT seatID from order_items WHERE orderID='$orders[$i]'";
+          
+          $result = $db->query($query);
+          
+          $seats = array();
+          
+          while($row = $result->fetch_assoc()) 
+          {
+            $seats[] = $row['seatID'];
+          }
+          
+          echo "<tr>";
+          echo "  <td>$orders[$i]</td>";
+          echo "  <td>$movieName</td>";
+          echo "  <td>$movieDate</td>";
+          echo "  <td>$movieTime</td>";
+          echo "  <td>";
+          
+          for($j = 0; $j < sizeof($seats); $j++)
+          {
+            echo "$seats[$j]";
+            
+            if($j != (sizeof($seats) - 1))
+            {
+              echo ", ";
+            }
+          }
+          
+          echo "  </td>";
+          
+          echo "    <td>Total Cost</td>";
+          echo "    <td>Booking Date</td>";
+          echo "</tr>";
+        }
+        
+        echo "</table>";
+      }
+    ?>
     </div>
   </div>
   
