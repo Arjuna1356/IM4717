@@ -4,15 +4,14 @@
 <?php
   if(isset($_POST['submit']))
   {
-    @ $db = new mysqli('localhost', 'f37im', 'f37im', 'f37im');
+    @ $db = new mysqli('localhost', 'f37ee', 'f37ee', 'f37ee');
 
     $userEmail = $_POST['email_input'];
     
     $query = "SELECT movies.movieName, movies.movieDate, movies.movieTime,
-                order_items.seatNo, orders.amount, orders.bookingDate
-                  FROM customers, movies, orders, order_items
-                    WHERE customers.email=$userEmail
-                      AND orders.customerID=customers.customerID
+                order_items.seatID, orders.amount, orders.bookingDate
+                  FROM movies, orders, order_items
+                    WHERE orders.customerEmail='$userEmail'
                       AND order_items.orderID=orders.orderID
                       AND movies.movieID=orders.movieID";
     
@@ -20,13 +19,13 @@
     
     $db->close();
     
-    if($result)
-    {
-      
-    }
-    else
-    {
-      
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "order: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+        }
+    } else {
+        echo "0 results";
     }
   }
 ?>

@@ -153,22 +153,54 @@
       </div>
         
       <div id="showtimes_wrapper">
-        <h1>Showtimes</h1>
-        
-        <button class="accordion">Today</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
+        <form class="" action="payments.php" method="get">
+          <h1>Showtimes</h1>
+          
+          <button type="button" class="accordion">
+            <p id="today">
+              <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate();
+                document.getElementById("today").innerHTML = m + "/" + d + "/" + y;
+              </script>
+            </p>
+          </button>
+          <div class="panel">
+            <button type="submit" name="movieID" value="111" class="time">9.00pm</button> &nbsp <button type="submit" name="movieID" value="112" class="time">10.00pm</button>
+          </div>
 
-        <button class="accordion">Tomorrow</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
+          <button type="button" class="accordion">
+            <p id="tomorrow">
+              <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate() +1;
+                document.getElementById("tomorrow").innerHTML = m + "/" + d + "/" + y;
+              </script>
+            </p>
+          </button>
+          <div class="panel">
+            <button type="submit" name="movieID" value="113" class="time">3.00pm</button> &nbsp <button type="submit" name="movieID" value="114" class="time">5.00pm</button>
+          </div>
 
-        <button class="accordion">After that</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
+          <button type="button" class="accordion">
+            <p id="dayaftertomorrow">
+              <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate() +2;
+                document.getElementById("dayaftertomorrow").innerHTML = m + "/" + d + "/" + y;
+              </script>
+            </p>
+          </button>
+          <div class="panel">
+            <button type="submit" name="movieID" value="115" class="time">10.00am</button> &nbsp <button type="submit" name="movieID" value="116" class="time">1.00pm</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
