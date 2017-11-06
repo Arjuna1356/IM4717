@@ -1,0 +1,87 @@
+#content_box {
+  margin: 20px;
+  margin-top: 0px;
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+#movie_tabs {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tab_button {
+  padding: 14px 16px;
+  float: left;
+  
+  background-color: #41808f;
+  font-family: Arial;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px 5px 0px 0px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.tab_button:hover {
+    background-color: #6caab9;
+}
+
+.tab_button.active {
+    background-color: #bbd2e4;
+}
+
+.movie_display {
+  display: none;
+  width: 960px;
+  
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #bbd2e4;
+}
+
+.movie_display a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.movie_info {
+  margin: 25px;
+  width: 175px;
+  display: inline-block;
+  vertical-align: top;
+  
+  animation: fadeEffect 0.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.movie_poster {
+  width: 175px;
+  height: 260px;
+}
+
+.movie_title {
+  height: 40px;
+  
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.movie_rating {
+  height: 30px;
+  
+  color: #1a618f;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.movie_time {
+  font-size: 12px;
+}

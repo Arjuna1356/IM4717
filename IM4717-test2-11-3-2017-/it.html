@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Lunar Theatre</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="css/template_styles.css">
+<link rel="stylesheet" href="css/movie_pages.css">
+
+<style>
+
+</style> 
+
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      <a href="index.html">
+        <img src="images/logo.png" 
+          alt="Lunar Theatre">
+      </a>
+    </div>
+    
+    <div id="location-details">
+      <h1>Lunar Theatre at Kino Place</h1>
+      <h2>357 North Ave., Kino Place SG 357246</h2>
+      <p>Email: customersvc@lunartheatre.com.sg</p>
+      <p>Hotline: (+65) 6234-1234</p>
+    </div>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="buytickets.html">Buy Tickets</a></li>
+      <li><a href="checkbooking.html">Check Booking</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  
+  <div id="content">
+    <div id="breadcrumbs">
+      <a href="index.html">Home</a> <p>>></p> <a href="movies.html">Movies</a> <p>>></p> <p><b>It</b></p>
+    </div>
+    
+    <div id="content_box">
+      <div id="content_wrapper">
+        <img src="images/posters/it_portrait.jpg" 
+          alt="It Poster" id="movie_poster">
+          
+        <div id="movie_details">
+          <h1>Details</h1>
+          
+          <div id="left_details">
+            <div class="detail_section">
+              <div class="detail_heading">
+                Cast: 
+              </div>
+              
+              <div class="detail_text">
+                Jaeden Lieberher, Wyatt Oleff, Jeremy Ray Taylor, Sophia Lillis, Finn Wolfhard
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Director: 
+              </div>
+              
+              <div class="detail_text">
+                Andrés Muschietti
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Genre: 
+              </div>
+              
+              <div class="detail_text">
+                Horror
+              </div>
+            </div>
+          </div>
+          
+          <div id="right_details">
+            <div class="detail_section">
+              <div class="detail_heading">
+                Release: 
+              </div>
+              
+              <div class="detail_text">
+                07-09-2017
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Running Time: 
+              </div>
+              
+              <div class="detail_text">
+                135 minutes
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Distributor: 
+              </div>
+              
+              <div class="detail_text">
+                Warner Brothers
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Language: 
+              </div>
+              
+              <div class="detail_text">
+                English (Subtitles: Chinese)
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="movie_synopsis">
+          <h1>Synopsys</h1>
+          
+          <div id="synopsis_text">
+            New Line Cinema’s horror thriller “It,” directed by Andrés Muschietti, 
+            is based on the hugely popular Stephen King novel of the same name, 
+            which has been terrifying readers for decades. 
+            <br><br>
+            When children begin to disappear in the town of Derry, Maine, a 
+            group of young kids are faced with their biggest fears when they 
+            square off against an evil clown named Pennywise, whose history of 
+            murder and violence dates back for centuries. 
+          </div>
+        </div>
+      </div>
+      
+      <div id="showtimes_wrapper">
+        <form class="" action="payments.php" method="get">
+          <h1>Showtimes</h1>
+          
+          <button type="button" class="accordion">
+            <p id="today">
+              <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate();
+                document.getElementById("today").innerHTML = d + "/" + m + "/" + y;
+              </script>
+            </p>
+          </button>
+          <div class="panel">
+            <button type="submit" name="movieID" value="221" class="time">4.30pm</button> 
+            &nbsp 
+            <button type="submit" name="movieID" value="222" class="time">9.30pm</button>
+          </div>
+
+          <button type="button" class="accordion">
+            <p id="tomorrow">
+              <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate() +1;
+                document.getElementById("tomorrow").innerHTML = d + "/" + m + "/" + y;
+              </script>
+            </p>
+          </button>
+          <div class="panel">
+            <button type="submit" name="movieID" value="223" class="time">1.30pm</button> 
+            &nbsp 
+            <button type="submit" name="movieID" value="224" class="time">11.30pm</button>
+          </div>
+
+          <button type="button" class="accordion">
+            <p id="dayaftertomorrow">
+              <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate() +2;
+                document.getElementById("dayaftertomorrow").innerHTML = d + "/" + m + "/" + y;
+              </script>
+            </p>
+          </button>
+          <div class="panel">
+            <button type="submit" name="movieID" value="225" class="time">9.30am</button> 
+            &nbsp 
+            <button type="submit" name="movieID" value="226" class="time">2.30pm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <footer>Copyright &copy; 2014 Lunar Theatre, All Rights Reserved
+  </footer>
+  
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    
+    acc[0].classList.add("active");
+    var panel = acc[0].nextElementSibling;
+    panel.style.maxHeight = panel.scrollHeight + "px";
+    
+    var i;
+    for (i = 0; i < acc.length; i++) 
+    {
+      acc[i].onclick = function() 
+      {
+        var acc = document.getElementsByClassName("accordion");
+        
+        for(var j = 0; j < acc.length; j++)
+        {
+          if(acc[j] != this)
+          {
+            acc[j].classList.remove("active");
+            var panel = acc[j].nextElementSibling;
+            panel.style.maxHeight = null;
+          }
+          else 
+          {
+            acc[j].classList.add("active");
+            var panel = acc[j].nextElementSibling;
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+
+

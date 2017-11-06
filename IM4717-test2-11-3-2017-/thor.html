@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Lunar Theatre</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="css/template_styles.css">
+<link rel="stylesheet" href="css/movie_pages.css">
+
+<style>
+
+</style> 
+
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      <a href="index.html">
+        <img src="images/logo.png" 
+          alt="Lunar Theatre">
+      </a>
+    </div>
+    
+    <div id="location-details">
+      <h1>Lunar Theatre at Kino Place</h1>
+      <h2>357 North Ave., Kino Place SG 357246</h2>
+      <p>Email: customersvc@lunartheatre.com.sg</p>
+      <p>Hotline: (+65) 6234-1234</p>
+    </div>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="buytickets.html">Buy Tickets</a></li>
+      <li><a href="checkbooking.html">Check Booking</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  
+  <div id="content">
+    <div id="breadcrumbs">
+      <a href="index.html">Home</a> <p>>></p> <a href="movies.html">Movies</a> <p>>></p> <p><b>Thor: Ragnarok</b></p>
+    </div>
+    
+    <div id="content_box">
+      <div id="content_wrapper">
+        <img src="images/posters/thor_portrait.jpg" 
+          alt="Thor Poster" id="movie_poster">
+          
+        <div id="movie_details">
+          <h1>Details</h1>
+          
+          <div id="left_details">
+            <div class="detail_section">
+              <div class="detail_heading">
+                Cast: 
+              </div>
+              
+              <div class="detail_text">
+                Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Idris Elba, Jeff Goldblum, Tessa Thompson, Karl Urban, Mark Ruffalo, Anthony Hopkins
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Director: 
+              </div>
+              
+              <div class="detail_text">
+                Taika Waititi
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Genre: 
+              </div>
+              
+              <div class="detail_text">
+                Action/ Adventure
+              </div>
+            </div>
+          </div>
+          
+          <div id="right_details">
+            <div class="detail_section">
+              <div class="detail_heading">
+                Release: 
+              </div>
+              
+              <div class="detail_text">
+                26-10-2017
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Running Time: 
+              </div>
+              
+              <div class="detail_text">
+                131 minutes
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Distributor: 
+              </div>
+              
+              <div class="detail_text">
+                Walt Disney Studios Motion Pictures
+              </div>
+            </div>
+            
+            <div class="detail_section">
+              <div class="detail_heading">
+                Language: 
+              </div>
+              
+              <div class="detail_text">
+                English (Subtitles: Chinese)
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="movie_synopsis">
+          <h1>Synopsys</h1>
+          
+          <div id="synopsis_text">
+            Imprisoned, the mighty Thor finds himself in a lethal gladiatorial 
+            contest against the Hulk, his former ally. Thor must fight for 
+            survival and race against time to prevent the all-powerful Hela from 
+            destroying his home and the Asgardian civilization.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>Copyright &copy; 2014 Lunar Theatre, All Rights Reserved
+  </footer>
+  
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    
+    acc[0].classList.add("active");
+    var panel = acc[0].nextElementSibling;
+    panel.style.maxHeight = panel.scrollHeight + "px";
+    
+    var i;
+    for (i = 0; i < acc.length; i++) 
+    {
+      acc[i].onclick = function() 
+      {
+        var acc = document.getElementsByClassName("accordion");
+        
+        for(var j = 0; j < acc.length; j++)
+        {
+          if(acc[j] != this)
+          {
+            acc[j].classList.remove("active");
+            var panel = acc[j].nextElementSibling;
+            panel.style.maxHeight = null;
+          }
+          else 
+          {
+            acc[j].classList.add("active");
+            var panel = acc[j].nextElementSibling;
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,128 @@
+#content_box {
+  margin: 20px;
+  margin-top: 0px;
+  width: 960px;
+  position: relative;
+  display: inline-block;
+  
+  background-color: #bbd2e4;
+}
+
+#content_wrapper {
+  display: inline-block;
+}
+
+#movie_poster {
+  width: 265px;
+  height: 400px;
+  margin: 20px;
+  float: left;
+}
+
+#movie_details {
+  margin-top: 20px;
+  width: 655px;
+  display: inline-block;
+}
+
+#movie_details h1 {
+  margin: 0px;
+  margin-bottom: 10px;
+  
+  font-size: 18px;
+}
+
+#left_details {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#right_details {
+  margin-left: 45px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.detail_section {
+  margin-bottom: 15px;
+}
+
+.detail_heading {
+  width: 90px;
+  display: inline-block;
+  vertical-align: top;
+  
+  font-size: 14px;
+}
+
+.detail_text {
+  width: 150px;
+  display: inline-block;
+  vertical-align: top;
+  
+  font-size: 14px;
+}
+
+#movie_synopsis {
+  width: 630px;
+  display: inline-block;
+}
+
+#movie_synopsis h1 {
+  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  font-size: 18px;
+}
+
+#synopsis_text {
+  font-size: 14px;
+}
+
+#showtimes_wrapper {
+  margin: 20px;
+  margin-top: 0px;
+}
+
+#showtimes_wrapper h1 {
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+button.accordion {
+  background-color: #6caab9;
+  color: #e7ebee;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+button.accordion:hover {
+  background-color: #1a618f;
+}
+
+button.accordion.active {
+  background-color: #212c62;
+}
+
+button.accordion p {
+  margin: 0px;
+}
+
+div.panel {
+  padding: 0px 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.time {
+  margin: 20px 0px;
+}

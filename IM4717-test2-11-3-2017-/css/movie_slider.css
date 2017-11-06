@@ -1,0 +1,156 @@
+#movie_slider {
+  padding: 0;
+  margin: auto;
+  width: 100%;
+  height: 550px;
+  
+  position: relative;
+  
+  background-color: #262626;
+}
+
+#movie_slides {
+  padding: 0;
+  margin: 0;
+  
+  list-style: none;
+}
+
+.movie_slide {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  
+  text-align: center;
+}
+
+.poster {
+  margin: auto;
+  height: 100%;
+  
+  display: block;
+  
+  border: none;
+  pointer-events: none;
+}
+
+.slider_btn {
+  display: block;
+  width: 50px; 
+  height: 100%;
+  margin-top: 0;
+  padding: 0;
+  
+  position: absolute;
+  top: 0; 
+  z-index: 6;
+  
+  color: #fff; 
+  background-color: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  border: none;
+  outline: none;
+  text-align:center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#movie_slider:hover .slider_btn {
+  visibility: visible;
+}
+
+.slider_btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#slider_prev {
+  left: 0;
+}
+
+#slider_next {
+  right: 0;
+}
+
+#radio_buttons {
+  margin: 0;
+  padding: 0 7px;
+  height: 32px;
+  width: auto;
+  display: block;
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  z-index: 6;
+  
+  list-style: none;
+  font-size: 1px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+.radio_button {
+  position: relative;
+  display: inline-block;
+  margin: 0 3px;
+  padding: 0;
+}
+
+.radio {
+  display: none;
+}
+
+.radio_label {
+  display: block;
+  margin: 0;
+  width: 60px; 
+  height: 32px;
+  
+  text-decoration: none;
+  cursor: pointer;
+  
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 120% auto;
+  
+  border-radius: 3px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  
+  opacity: 0.8;
+  color: #000; 
+}
+
+.radio_label:hover {
+  border: 2px solid #fff;
+  opacity: 1;
+}
+
+.radio_label.active {
+  border: 2px solid #fff;
+  opacity: 1;
+}
+
+#radio_buttons li#radio1 label {
+    background-image: url(../images/posters/bladerunner_portrait.jpg);
+}
+
+#radio_buttons li#radio2 label {
+    background-image: url(../images/posters/it_landscape.jpg);
+}
+
+#radio_buttons li#radio3 label {
+    background-image: url(../images/posters/kingsman_landscape.jpg);
+}
+
+#radio_buttons li#radio4 label {
+    background-image: url(../images/posters/thor_portrait.jpg);
+}

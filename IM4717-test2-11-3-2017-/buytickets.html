@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Lunar Theatre</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="css/template_styles.css">
+<link rel="stylesheet" href="css/buytickets.css">
+
+</head>
+
+<body>
+  <header>
+    <div id="logo">
+      <a href="index.html">
+        <img src="images/logo.png"
+          alt="Lunar Theatre">
+      </a>
+    </div>
+
+    <div id="location-details">
+      <h1>Lunar Theatre at Kino Place</h1>
+      <h2>357 North Ave., Kino Place SG 357246</h2>
+      <p>Email: customersvc@lunartheatre.com.sg</p>
+      <p>Hotline: (+65) 6234-1234</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="buytickets.html">Buy Tickets</a></li>
+      <li><a href="checkbooking.php">Check Booking</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <div id="content">
+    <div id="breadcrumbs">
+      <a href="index.html">Home</a> <p>>></p> <p><b>Buy Tickets</b></p>
+    </div>
+
+    <div id="innerbox">
+      <div class="tab">
+        <button class="tablinks" onclick="openDay(event, 'Today')" id="defaultOpen"><p id="today"><script>
+          n =  new Date();
+          y = n.getFullYear();
+          m = n.getMonth() + 1;
+          d = n.getDate();
+          document.getElementById("today").innerHTML = m + "/" + d + "/" + y;
+        </script></p></button>
+        <button class="tablinks" onclick="openDay(event, 'Tomorrow')"><p id="tomorrow"><script>
+          n =  new Date();
+          y = n.getFullYear();
+          m = n.getMonth() + 1;
+          d = n.getDate() +1;
+          document.getElementById("tomorrow").innerHTML = m + "/" + d + "/" + y;
+        </script></p></button>
+        <button class="tablinks" onclick="openDay(event, 'Day_after_Tomorrow')"><p id="dayaftertomorrow"><script>
+          n =  new Date();
+          y = n.getFullYear();
+          m = n.getMonth() + 1;
+          d = n.getDate() +2;
+          document.getElementById("dayaftertomorrow").innerHTML = m + "/" + d + "/" + y;
+        </script></p></button>
+      </div>
+
+      <div id="Today" class="tabcontent">
+        <form class="" action="payments.php" method="get">
+        <table>
+          <tr>
+            <td>
+              <h3><a href="it.html">It</a></h3>
+              <p class="td_content">Language: English w/ Chinese Subtitles<br>
+              Rating: NC16 (Horror & Violence)</p>
+            </td>
+            
+            <td>
+              <button type="submit" name="movieID" value="221" class="time">4.30pm</button> &nbsp <button type="submit" name="movieID" value="222" class="time">9.30pm</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3><a href="kingsman.html">Kingsman: The Golden Circle</a></h3>
+              <p class="td_content">Language: English w/ Chinese Subtitles<br>
+              Rating: NC16 (Violence & Coarse Language)</p>
+            </td>
+            
+            <td>
+              <button type="submit" name="movieID" value="111" class="time">9.00pm</button> &nbsp <button type="submit" name="movieID" value="112" class="time">10.00pm</button>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+      <div id="Tomorrow" class="tabcontent">
+        <table>
+          <tr>
+            <td>
+              <h3><a href="it.html">It</a></h3>
+              <p class="td_content">Language: English w/ Chinese Subtitles<br>
+              Rating: NC16 (Horror & Violence)</p>
+            </td>
+            
+            <td>
+              <button type="submit" name="movieID" value="223" class="time">1.30pm</button> &nbsp <button type="submit" name="movieID" value="224" class="time">11.30pm</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3><a href="kingsman.html">Kingsman: The Golden Circle</a></h3>
+              <p class="td_content">Language: English w/ Chinese Subtitles<br>
+              Rating: NC16 (Violence & Coarse Language)</p>
+            </td>
+            
+            <td>
+              <button type="submit" name="movieID" value="113" class="time">3.00pm</button> &nbsp <button type="submit" name="movieID" value="114" class="time">5.00pm</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="Day_after_Tomorrow" class="tabcontent">
+        <table>
+          <tr>
+            <td>
+              <h3><a href="it.html">It</a></h3>
+              <p class="td_content">Language: English w/ Chinese Subtitles<br>
+              Rating: NC16 (Horror & Violence)</p>
+            </td>
+            
+            <td>
+              <button type="submit" name="movieID" value="225" class="time">9.30am</button> &nbsp <button type="submit" name="movieID" value="226" class="time">2.30pm</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h3><a href="kingsman.html">Kingsman: The Golden Circle</a></h3>
+              <p class="td_content">Language: English w/ Chinese Subtitles<br>
+              Rating: NC16 (Violence & Coarse Language)</p>
+            </td>
+            
+            <td>
+              <button type="submit" name="movieID" value="115" class="time">10.00am</button> &nbsp <button type="submit" name="movieID" value="116" class="time">1.00pm</button>
+            </td>
+          </tr>
+        </table>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>Copyright &copy; 2014 Lunar Theatre, All Rights Reserved
+  </footer>
+</body>
+</html>
+
+<script type="text/javascript">
+document.getElementById("defaultOpen").click();
+
+function openDay(evt, Day) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(Day).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
