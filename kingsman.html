@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>Kingsman | Lunar Theatre</title>
+<title>Lunar Theatre</title>
 <meta charset="utf-8">
 
 <link rel="stylesheet" href="css/template_styles.css">
@@ -10,7 +10,7 @@
 
 <style>
 
-</style> 
+</style>
 
 </head>
 
@@ -18,11 +18,11 @@
   <header>
     <div id="logo">
       <a href="index.html">
-        <img src="images/logo.png" 
+        <img src="images/logo.png"
           alt="Lunar Theatre">
       </a>
     </div>
-    
+
     <div id="location-details">
       <h1>Lunar Theatre at Kino Place</h1>
       <h2>357 North Ave., Kino Place SG 357246</h2>
@@ -30,166 +30,204 @@
       <p>Hotline: (+65) 6234-1234</p>
     </div>
   </header>
-  
+
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="movies.html">Movies</a></li>
       <li><a href="buytickets.html">Buy Tickets</a></li>
       <li><a href="checkbooking.html">Check Booking</a></li>
-      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="contactus.php">Contact Us</a></li>
     </ul>
   </nav>
-  
+
   <div id="content">
     <div id="breadcrumbs">
       <a href="index.html">Home</a> <p>>></p> <a href="movies.html">Movies</a> <p>>></p> <p><b>Kingsman: The Golden Circle</b></p>
     </div>
-    
+
     <div id="content_box">
       <div id="content_wrapper">
-        <img src="images/posters/kingsman_portrait.jpg" 
+        <img src="images/posters/kingsman_portrait.jpg"
           alt="Kingsman Poster" id="movie_poster">
-          
+
         <div id="movie_details">
           <h1>Details</h1>
-          
+
           <div id="left_details">
             <div class="detail_section">
               <div class="detail_heading">
-                Cast: 
+                Cast:
               </div>
-              
+
               <div class="detail_text">
                 Colin Firth, Julianne Moore, Taron Egerton, Mark Strong, Halle Berry, Sir Elton John, Channing Tatum, Jeff Bridges
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Director: 
+                Director:
               </div>
-              
+
               <div class="detail_text">
                 Matthew Vaughn
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Genre: 
+                Genre:
               </div>
-              
+
               <div class="detail_text">
                 Action/ Adventure
               </div>
             </div>
           </div>
-          
+
           <div id="right_details">
             <div class="detail_section">
               <div class="detail_heading">
-                Release: 
+                Release:
               </div>
-              
+
               <div class="detail_text">
                 21-09-2017
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Running Time: 
+                Running Time:
               </div>
-              
+
               <div class="detail_text">
                 142 minutes
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Distributor: 
+                Distributor:
               </div>
-              
+
               <div class="detail_text">
                 20th Century Fox
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Language: 
+                Language:
               </div>
-              
+
               <div class="detail_text">
                 English (Subtitles: Chinese)
               </div>
             </div>
           </div>
         </div>
-        
+
         <div id="movie_synopsis">
           <h1>Synopsys</h1>
-          
+
           <div id="synopsis_text">
-            "Kingsman: The Secret Service" introduced the world to Kingsman - an 
-            independent, international intelligence agency operating at the 
-            highest level of discretion, whose ultimate goal is to keep the world 
-            safe. 
+            "Kingsman: The Secret Service" introduced the world to Kingsman - an
+            independent, international intelligence agency operating at the
+            highest level of discretion, whose ultimate goal is to keep the world
+            safe.
             <br><br>
-            In "Kingsman: The Golden Circle," our heroes face a new challenge. 
-            When their headquarters are destroyed and the world is held hostage, 
-            their journey leads them to the discovery of an allied spy 
-            organization in the US called Statesman, dating back to the day they 
-            were both founded. 
+            In "Kingsman: The Golden Circle," our heroes face a new challenge.
+            When their headquarters are destroyed and the world is held hostage,
+            their journey leads them to the discovery of an allied spy
+            organization in the US called Statesman, dating back to the day they
+            were both founded.
             <br><br>
-            In a new adventure that tests their agents' strength and wits to the 
-            limit, these two elite secret organizations band together to defeat 
-            a ruthless common enemy, in order to save the world, something 
-            that's becoming a bit of a habit for Eggsy... 
+            In a new adventure that tests their agents' strength and wits to the
+            limit, these two elite secret organizations band together to defeat
+            a ruthless common enemy, in order to save the world, something
+            that's becoming a bit of a habit for Eggsy...
           </div>
         </div>
       </div>
-        
+
       <div id="showtimes_wrapper">
-        <h1>Showtimes</h1>
-        
-        <button class="accordion">Today</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
+        <form class="" action="payments.php" method="get">
+          <h1>Showtimes</h1>
 
-        <button class="accordion">Tomorrow</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
+          <button type="button" class="accordion">
+            <p id="today">
+              <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate();
+                document.getElementById("today").innerHTML = d + "/" + m + "/" + y;
+              </script>
+            </p>
+          </button>
+          <div class="panel">
+            <button type="submit" name="movieID" value="111" class="time">9.00pm</button>
+            &nbsp
+            <button type="submit" name="movieID" value="112" class="time">10.00pm</button>
+          </div>
 
-        <button class="accordion">After that</button>
-        <div class="panel">
-          <p>Lorem ipsum...</p>
-        </div>
+          <button type="button" class="accordion">
+            <p id="tomorrow">
+              <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate() +1;
+                document.getElementById("tomorrow").innerHTML = d + "/" + m + "/" + y;
+              </script>
+            </p>
+          </button>
+          <div class="panel">
+            <button type="submit" name="movieID" value="113" class="time">3.00pm</button>
+            &nbsp
+            <button type="submit" name="movieID" value="114" class="time">5.00pm</button>
+          </div>
+
+          <button type="button" class="accordion">
+            <p id="dayaftertomorrow">
+              <script>
+                n =  new Date();
+                y = n.getFullYear();
+                m = n.getMonth() + 1;
+                d = n.getDate() +2;
+                document.getElementById("dayaftertomorrow").innerHTML = d + "/" + m + "/" + y;
+              </script>
+            </p>
+          </button>
+          <div class="panel">
+            <button type="submit" name="movieID" value="115" class="time">10.00am</button>
+            &nbsp
+            <button type="submit" name="movieID" value="116" class="time">1.00pm</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-  
+
   <footer>Copyright &copy; 2014 Lunar Theatre, All Rights Reserved
   </footer>
-  
+
   <script>
     var acc = document.getElementsByClassName("accordion");
-    
+
     acc[0].classList.add("active");
     var panel = acc[0].nextElementSibling;
     panel.style.maxHeight = panel.scrollHeight + "px";
-    
+
     var i;
-    for (i = 0; i < acc.length; i++) 
+    for (i = 0; i < acc.length; i++)
     {
-      acc[i].onclick = function() 
+      acc[i].onclick = function()
       {
         var acc = document.getElementsByClassName("accordion");
-        
+
         for(var j = 0; j < acc.length; j++)
         {
           if(acc[j] != this)
@@ -198,17 +236,15 @@
             var panel = acc[j].nextElementSibling;
             panel.style.maxHeight = null;
           }
-          else 
+          else
           {
             acc[j].classList.add("active");
             var panel = acc[j].nextElementSibling;
             panel.style.maxHeight = panel.scrollHeight + "px";
-          } 
+          }
         }
       }
     }
   </script>
 </body>
 </html>
-
-

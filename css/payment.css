@@ -1,6 +1,6 @@
 #content {
   margin-top: 15px;
-  height: 500px;
+  display: inline-block;
 
   overflow: hidden;
 
@@ -9,7 +9,8 @@
 
 #innerbox {
   margin: 20px;
-  height: 425px;
+  width: 960px;
+  display: inline-block;
   position: relative;
   background-color: #bbd2e4;
 }
@@ -53,6 +54,7 @@ ol {
   input[type=checkbox]:checked+label {
       background: #55dab2;
   }
+
   label {
     display: block;
     position: relative;
