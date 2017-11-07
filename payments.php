@@ -59,8 +59,23 @@ input[type=checkbox]:disabled+label{
       }
     }
 
-
 }
+</script>
+
+<script>
+  function checkEmail(){
+  var formEmail = document.getElementById("email");
+  var letters = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  if (formEmail.value.match(letters)) {
+    return true;
+  }
+  else {
+    alert('Please enter a valid email.');
+    return false;
+  }
+  }
+
 </script>
 
 </head>
@@ -95,7 +110,7 @@ input[type=checkbox]:disabled+label{
   <div id="content">
     <div id="innerbox">
       <h1><b><u>Payment</u></b></h1>
-      <form name="bookingform" action="update.php" method="post">
+      <form name="bookingform" action="update.php" method="post" onsubmit="return checkEmail();">
         <table>
           <tr>
             <td><b>Movie Details</b></td>
@@ -107,7 +122,7 @@ input[type=checkbox]:disabled+label{
 
           <tr>
             <td><b>Email:</b></td>
-            <td><input type="email" name="email" required></td>
+            <td><input type="email" name="email" id="email" required></td>
           </tr>
 
           <tr>

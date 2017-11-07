@@ -22,7 +22,21 @@
 <style>
 
 </style>
+<script>
+function checkEmail(){
+var formEmail = document.getElementById("email");
+var letters = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
+if (formEmail.value.match(letters)) {
+  return true;
+}
+else {
+  alert('Please enter a valid email.');
+  return false;
+}
+}
+
+</script>
 
 </head>
 
@@ -64,7 +78,7 @@
     Email: <a href="customersvc@lunartheatre.com.sg">customersvc@lunartheatre.com.sg</a><br>
     Hotline: (+65) 6234-1234</p>
 
-    <form action="" method="post">
+    <form action="" method="post" onsubmit="return checkEmail();">
       <label>*Name:</label><input type="text" name="name" id="input" required><br>
       <label>*Email:</label><input type="email" name="emailadd" id="input" required><br>
       <label>*Feedback/Comments:</label><textarea name="comments" rows="8" cols="40" id="input" required></textarea><br>
