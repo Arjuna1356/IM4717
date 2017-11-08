@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>Blade Runner 2049 | Lunar Theatre</title>
+<title>Lunar Theatre</title>
 <meta charset="utf-8">
 
 <link rel="stylesheet" href="css/template_styles.css">
@@ -10,7 +10,7 @@
 
 <style>
 
-</style> 
+</style>
 
 </head>
 
@@ -18,11 +18,11 @@
   <header>
     <div id="logo">
       <a href="index.html">
-        <img src="images/logo.png" 
+        <img src="images/logo.png"
           alt="Lunar Theatre">
       </a>
     </div>
-    
+
     <div id="location-details">
       <h1>Lunar Theatre at Kino Place</h1>
       <h2>357 North Ave., Kino Place SG 357246</h2>
@@ -30,139 +30,139 @@
       <p>Hotline: (+65) 6234-1234</p>
     </div>
   </header>
-  
+
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="movies.html">Movies</a></li>
       <li><a href="buytickets.html">Buy Tickets</a></li>
-      <li><a href="checkbooking.html">Check Booking</a></li>
-      <li><a href="contactus.html">Contact Us</a></li>
+      <li><a href="checkbooking.php">Check Booking</a></li>
+      <li><a href="contactus.php">Contact Us</a></li>
     </ul>
   </nav>
-  
+
   <div id="content">
     <div id="breadcrumbs">
       <a href="index.html">Home</a> <p>>></p> <a href="movies.html">Movies</a> <p>>></p> <p><b>Blade Runner 2049</b></p>
     </div>
-    
+
     <div id="content_box">
       <div id="content_wrapper">
-        <img src="images/posters/bladerunner_portrait.jpg" 
+        <img src="images/posters/bladerunner_portrait.jpg"
           alt="Bladerunner Poster" id="movie_poster">
-          
+
         <div id="movie_details">
           <h1>Details</h1>
-          
+
           <div id="left_details">
             <div class="detail_section">
               <div class="detail_heading">
-                Cast: 
+                Cast:
               </div>
-              
+
               <div class="detail_text">
                 Ryan Gosling, Harrison Ford, Ana de Armas, Sylvia Hoeks, Robin Wright
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Director: 
+                Director:
               </div>
-              
+
               <div class="detail_text">
                 Denis Villeneuve
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Genre: 
+                Genre:
               </div>
-              
+
               <div class="detail_text">
                 Thriller
               </div>
             </div>
           </div>
-          
+
           <div id="right_details">
             <div class="detail_section">
               <div class="detail_heading">
-                Release: 
+                Release:
               </div>
-              
+
               <div class="detail_text">
                 05-10-2017
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Running Time: 
+                Running Time:
               </div>
-              
+
               <div class="detail_text">
                 164 minutes
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Distributor: 
+                Distributor:
               </div>
-              
+
               <div class="detail_text">
                 Sony Pictures Releasing
               </div>
             </div>
-            
+
             <div class="detail_section">
               <div class="detail_heading">
-                Language: 
+                Language:
               </div>
-              
+
               <div class="detail_text">
                 English (Subtitles: Chinese)
               </div>
             </div>
           </div>
         </div>
-        
+
         <div id="movie_synopsis">
           <h1>Synopsys</h1>
-          
+
           <div id="synopsis_text">
-            Thirty years after the events of the first film, a new blade runner, 
-            LAPD Officer K (Ryan Gosling), unearths a long-buried secret that has 
-            the potential to plunge what's left of society into chaos. 
+            Thirty years after the events of the first film, a new blade runner,
+            LAPD Officer K (Ryan Gosling), unearths a long-buried secret that has
+            the potential to plunge what's left of society into chaos.
             <br><br>
-            K's discovery leads him on a quest to find Rick Deckard 
+            K's discovery leads him on a quest to find Rick Deckard
             (Harrison Ford), a former LAPD blade runner who has been missing for
-            30 years. 
+            30 years.
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <footer>Copyright &copy; 2014 Lunar Theatre, All Rights Reserved
   </footer>
-  
+
   <script>
     var acc = document.getElementsByClassName("accordion");
-    
+
     acc[0].classList.add("active");
     var panel = acc[0].nextElementSibling;
     panel.style.maxHeight = panel.scrollHeight + "px";
-    
+
     var i;
-    for (i = 0; i < acc.length; i++) 
+    for (i = 0; i < acc.length; i++)
     {
-      acc[i].onclick = function() 
+      acc[i].onclick = function()
       {
         var acc = document.getElementsByClassName("accordion");
-        
+
         for(var j = 0; j < acc.length; j++)
         {
           if(acc[j] != this)
@@ -171,17 +171,15 @@
             var panel = acc[j].nextElementSibling;
             panel.style.maxHeight = null;
           }
-          else 
+          else
           {
             acc[j].classList.add("active");
             var panel = acc[j].nextElementSibling;
             panel.style.maxHeight = panel.scrollHeight + "px";
-          } 
+          }
         }
       }
     }
   </script>
 </body>
 </html>
-
-
