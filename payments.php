@@ -63,17 +63,41 @@ input[type=checkbox]:disabled+label{
 </script>
 
 <script>
-  function checkEmail(){
-  var formEmail = document.getElementById("email");
+  function checkForm() {
+
+    var seatCheck = document.querySelectorAll("#bookingtable :checked").length;
+    var formEmail = document.getElementById("email");
+
+    if(checkEmail(formEmail) == false){
+      return false;
+    }
+    if(checkboxCheck(seatCheck) == false){
+      return false;
+    }
+
+    return true;
+  }
+  function checkEmail(input){
+
   var letters = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-  if (formEmail.value.match(letters)) {
+  if (input.value.match(letters)) {
     return true;
   }
   else {
     alert('Please enter a valid email.');
     return false;
   }
+  }
+
+  function checkboxCheck(input) {
+    if(input == 0){
+      alert("Please select at least 1 seat.");
+      return false;
+    }
+    else {
+      return true;
+    }
   }
 
 </script>
@@ -110,8 +134,8 @@ input[type=checkbox]:disabled+label{
   <div id="content">
     <div id="innerbox">
       <h1><b><u>Payment</u></b></h1>
-      <form name="bookingform" action="update.php" method="post" onsubmit="return checkEmail();">
-        <table>
+      <form name="bookingform" action="update.php" method="post" onsubmit="return checkForm();">
+        <table id="bookingtable">
           <tr>
             <td><b>Movie Details</b></td>
             <td><input type="text" name="movieName" value="<?php echo $movieName; ?>" readonly id="details"></td>
