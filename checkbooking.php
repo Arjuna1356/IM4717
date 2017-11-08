@@ -144,8 +144,18 @@
 
           echo "  </td>";
 
-          echo "    <td>Total Cost</td>";
-          echo "    <td>Booking Date</td>";
+          $query = "SELECT bookingDate, amount from orders WHERE orderID='$orders[$i]'";
+
+          $result = $db->query($query);
+
+          while($row = $result->fetch_assoc())
+          {
+            $bookingDate = $row['bookingDate'];
+            $amount = $row['amount'] * 10;
+          }
+          
+          echo "    <td>\$$amount</td>";
+          echo "    <td>$bookingDate</td>";
           echo "</tr>";
         }
 
